@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dio_nether_ore:block/nether_emerald_ore"
+    }
+  }
+}

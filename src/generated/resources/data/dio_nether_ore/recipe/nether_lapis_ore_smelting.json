@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "lapis_nugget",
+  "ingredient": {
+    "item": "dio_nether_ore:nether_lapis_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:lapis_nugget"
+  }
+}

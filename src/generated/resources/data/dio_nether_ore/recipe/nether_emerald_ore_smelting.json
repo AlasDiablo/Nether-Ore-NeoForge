@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "emerald_nugget",
+  "ingredient": {
+    "item": "dio_nether_ore:nether_emerald_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:emerald_nugget"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "values": [
+    "dio_nether_ore:nether_coal_ore",
+    "dio_nether_ore:nether_copper_ore",
+    "dio_nether_ore:nether_diamond_ore",
+    "dio_nether_ore:nether_emerald_ore",
+    "dio_nether_ore:nether_iron_ore",
+    "dio_nether_ore:nether_lapis_ore",
+    "dio_nether_ore:nether_redstone_ore"
+  ]
+}

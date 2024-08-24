@@ -1,0 +1,8 @@
+// 1.21.1	2024-08-24T17:19:39.6004944	Loot Tables
+ef531da668828b21e270fd2c801d4cd5cce4d785 data/dio_nether_ore/loot_table/blocks/nether_coal_ore.json
+c807aab92afde917faed8454417bdfa0092bce48 data/dio_nether_ore/loot_table/blocks/nether_copper_ore.json
+5d3df825929dae7a18b0350de8ebbf8aaac6ba69 data/dio_nether_ore/loot_table/blocks/nether_diamond_ore.json
+94ecc5f561ee6cabd2da40a35f158592862421fc data/dio_nether_ore/loot_table/blocks/nether_emerald_ore.json
+77527e7be685fc8bac61e602031e3c8e39568191 data/dio_nether_ore/loot_table/blocks/nether_iron_ore.json
+25873b3c7036058cbe45c4fd945ed103d91cedf1 data/dio_nether_ore/loot_table/blocks/nether_lapis_ore.json
+53e4e3899dcfb869035081bd9b63eb8c7c621f38 data/dio_nether_ore/loot_table/blocks/nether_redstone_ore.json
