@@ -3,12 +3,12 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.7,
-  "group": "iron_nugget",
+  "group": "iron_ingot",
   "ingredient": {
     "item": "dio_nether_ore:nether_iron_ore"
   },
   "result": {
     "count": 1,
-    "id": "minecraft:iron_nugget"
+    "id": "minecraft:iron_ingot"
   }
 }

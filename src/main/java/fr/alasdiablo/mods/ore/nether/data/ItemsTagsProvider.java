@@ -44,5 +44,7 @@ public class ItemsTagsProvider extends ItemTagsProvider {
         this.copy(NetherOreTags.Blocks.ORES_NETHER, NetherOreTags.Items.ORES_NETHER);
 
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        this.copy(Tags.Blocks.ORE_RATES_SPARSE, Tags.Items.ORE_RATES_SPARSE);
+        this.copy(Tags.Blocks.ORES_IN_GROUND_NETHERRACK, Tags.Items.ORES_IN_GROUND_NETHERRACK);
     }
 }

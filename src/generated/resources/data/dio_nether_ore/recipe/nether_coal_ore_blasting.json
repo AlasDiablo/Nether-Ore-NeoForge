@@ -3,12 +3,12 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.1,
-  "group": "coal_nugget",
+  "group": "coal",
   "ingredient": {
     "item": "dio_nether_ore:nether_coal_ore"
   },
   "result": {
     "count": 1,
-    "id": "dio_extended_resources:coal_nugget"
+    "id": "minecraft:coal"
   }
 }

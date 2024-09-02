@@ -30,17 +30,11 @@ public class BlockLootTables extends DioBlockLootSubProvider {
         this.enchantmentRegistryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
         this.registerNetherOre(NetherOreBlocks.NETHER_COAL_ORE.get(), ExtendedResourcesItems.COAL_NUGGET.get());
-
         this.registerNetherOre(NetherOreBlocks.NETHER_COPPER_ORE.get(), ExtendedResourcesItems.COPPER_NUGGET.get());
-
         this.registerNetherOre(NetherOreBlocks.NETHER_DIAMOND_ORE.get(), ExtendedResourcesItems.DIAMOND_NUGGET.get());
-
         this.registerNetherOre(NetherOreBlocks.NETHER_EMERALD_ORE.get(), ExtendedResourcesItems.EMERALD_NUGGET.get());
-
         this.registerNetherOre(NetherOreBlocks.NETHER_IRON_ORE.get(), Items.IRON_NUGGET);
-
         this.registerNetherOre(NetherOreBlocks.NETHER_LAPIS_ORE.get(), ExtendedResourcesItems.LAPIS_NUGGET.get());
-
         this.registerNetherOre(NetherOreBlocks.NETHER_REDSTONE_ORE.get(), ExtendedResourcesItems.REDSTONE_NUGGET.get());
     }
 

@@ -29,43 +29,23 @@ public class RecipesProvider extends RecipeProvider {
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         super.buildRecipes(recipeOutput);
 
-        this.registerNetherOre(NetherOreBlocks.NETHER_COAL_ORE, ExtendedResourcesItems.COAL_NUGGET, 0.1f,
-                               ExtendedResourcesRegistries.COAL_NUGGET, recipeOutput, NetherOreRegistries.NETHER_COAL_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_COPPER_ORE, ExtendedResourcesItems.COPPER_NUGGET, 0.7F,
-                               ExtendedResourcesRegistries.COPPER_NUGGET, recipeOutput, NetherOreRegistries.NETHER_COPPER_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_DIAMOND_ORE, ExtendedResourcesItems.DIAMOND_NUGGET, 1.0F,
-                               ExtendedResourcesRegistries.DIAMOND_NUGGET, recipeOutput, NetherOreRegistries.NETHER_DIAMOND_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_EMERALD_ORE, ExtendedResourcesItems.EMERALD_NUGGET, 1.0F,
-                               ExtendedResourcesRegistries.EMERALD_NUGGET, recipeOutput, NetherOreRegistries.NETHER_EMERALD_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_IRON_ORE, Items.IRON_NUGGET, 0.7F,
-                               "iron_nugget", recipeOutput, NetherOreRegistries.NETHER_IRON_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_LAPIS_ORE, ExtendedResourcesItems.LAPIS_NUGGET, 0.2F,
-                               ExtendedResourcesRegistries.LAPIS_NUGGET, recipeOutput, NetherOreRegistries.NETHER_LAPIS_ORE
-        );
-
-        this.registerNetherOre(NetherOreBlocks.NETHER_REDSTONE_ORE, ExtendedResourcesItems.REDSTONE_NUGGET, 0.7F,
-                               ExtendedResourcesRegistries.REDSTONE_NUGGET, recipeOutput, NetherOreRegistries.NETHER_REDSTONE_ORE
-        );
+        this.registerNetherOre(NetherOreBlocks.NETHER_COAL_ORE, Items.COAL, 0.1f, recipeOutput, NetherOreRegistries.NETHER_COAL_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_COPPER_ORE, Items.COPPER_INGOT, 0.7F, recipeOutput, NetherOreRegistries.NETHER_COPPER_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_DIAMOND_ORE, Items.DIAMOND, 1.0F, recipeOutput, NetherOreRegistries.NETHER_DIAMOND_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_EMERALD_ORE, Items.EMERALD, 1.0F, recipeOutput, NetherOreRegistries.NETHER_EMERALD_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_IRON_ORE, Items.IRON_INGOT, 0.7F, recipeOutput, NetherOreRegistries.NETHER_IRON_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_LAPIS_ORE, Items.LAPIS_LAZULI, 0.2F, recipeOutput, NetherOreRegistries.NETHER_LAPIS_ORE);
+        this.registerNetherOre(NetherOreBlocks.NETHER_REDSTONE_ORE, Items.REDSTONE, 0.7F, recipeOutput, NetherOreRegistries.NETHER_REDSTONE_ORE);
     }
 
-    private void registerNetherOre(ItemLike ingredient, ItemLike result, float experience, String group, RecipeOutput recipeOutput, String name) {
+    private void registerNetherOre(ItemLike ingredient, ItemLike result, float experience, RecipeOutput recipeOutput, String name) {
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(ingredient),
                         RecipeCategory.MISC,
                         result,
                         experience,
                         200
-                ).group(group)
+                ).group(getItemName(result))
                 .unlockedBy(getHasName(ingredient), has(ingredient))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(NetherOre.MOD_ID, name + "_smelting"));
         SimpleCookingRecipeBuilder.blasting(
@@ -74,7 +54,7 @@ public class RecipesProvider extends RecipeProvider {
                         result,
                         experience,
                         100
-                ).group(group)
+                ).group(getItemName(result))
                 .unlockedBy(getHasName(ingredient), has(ingredient))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(NetherOre.MOD_ID, name + "_blasting"));
     }

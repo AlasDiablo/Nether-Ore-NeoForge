@@ -1,14 +1,14 @@
 {
   "type": "minecraft:smelting",
-  "category": "misc",
+  "category": "blocks",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "redstone_nugget",
+  "group": "redstone",
   "ingredient": {
     "item": "dio_nether_ore:nether_redstone_ore"
   },
   "result": {
     "count": 1,
-    "id": "dio_extended_resources:redstone_nugget"
+    "id": "minecraft:redstone"
   }
 }

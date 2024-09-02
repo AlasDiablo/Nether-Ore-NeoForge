@@ -3,12 +3,12 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 1.0,
-  "group": "diamond_nugget",
+  "group": "diamond",
   "ingredient": {
     "item": "dio_nether_ore:nether_diamond_ore"
   },
   "result": {
     "count": 1,
-    "id": "dio_extended_resources:diamond_nugget"
+    "id": "minecraft:diamond"
   }
 }

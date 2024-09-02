@@ -49,11 +49,9 @@ public class BlocksTagsProvider extends BlockTagsProvider {
                 ORES_NETHER_REDSTONE
         );
 
-        this.tag(Tags.Blocks.ORES).addTags(
-                ORES_NETHER, Tags.Blocks.ORES_COAL, Tags.Blocks.ORES_COPPER,
-                Tags.Blocks.ORES_DIAMOND, Tags.Blocks.ORES_EMERALD, Tags.Blocks.ORES_IRON,
-                Tags.Blocks.ORES_LAPIS, Tags.Blocks.ORES_REDSTONE
-        );
+        this.tag(Tags.Blocks.ORES).addTag(ORES_NETHER);
+        this.tag(Tags.Blocks.ORE_RATES_SPARSE).addTag(ORES_NETHER);
+        this.tag(Tags.Blocks.ORES_IN_GROUND_NETHERRACK).addTag(ORES_NETHER);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 NETHER_COAL_ORE.get(),

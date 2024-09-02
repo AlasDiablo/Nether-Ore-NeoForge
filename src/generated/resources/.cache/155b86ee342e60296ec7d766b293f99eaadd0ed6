@@ -1,5 +1,6 @@
-// 1.21.1	2024-08-24T17:19:39.5984934	Tags for minecraft:item mod id dio_nether_ore
-7b47d892e12caef6e54da97d32cb8015aa26c5d4 data/c/tags/item/ores.json
+// 1.21.1	2024-09-02T10:18:49.801596339	Tags for minecraft:item mod id dio_nether_ore
+557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/item/ore_rates/sparse.json
+557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/item/ores.json
 07579a69fa3c0e3f93fb1eb611951632aeb79903 data/c/tags/item/ores/coal.json
 344175f6efc33787dd94ff34a3aff55ce6034b22 data/c/tags/item/ores/copper.json
 afb4687c8a54494fe4ae210f029edf9bb596b49f data/c/tags/item/ores/diamond.json
@@ -15,3 +16,4 @@ afb4687c8a54494fe4ae210f029edf9bb596b49f data/c/tags/item/ores/nether/diamond.js
 1eef9978296fd7b6a64429e8bda244bec092344f data/c/tags/item/ores/nether/lapis.json
 a54443fc6ab384d99c87aa1eec5525adf8e3dd7e data/c/tags/item/ores/nether/redstone.json
 a54443fc6ab384d99c87aa1eec5525adf8e3dd7e data/c/tags/item/ores/redstone.json
+557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/item/ores_in_ground/netherrack.json

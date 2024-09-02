@@ -1,12 +1,5 @@
 {
   "values": [
-    "#c:ores/nether",
-    "#c:ores/coal",
-    "#c:ores/copper",
-    "#c:ores/diamond",
-    "#c:ores/emerald",
-    "#c:ores/iron",
-    "#c:ores/lapis",
-    "#c:ores/redstone"
+    "#c:ores/nether"
   ]
 }
