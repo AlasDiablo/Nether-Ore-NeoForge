@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.ore.nether.data;
+package fr.alasdiablo.mods.ore.nether.data.lang;
 
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import net.minecraft.data.PackOutput;

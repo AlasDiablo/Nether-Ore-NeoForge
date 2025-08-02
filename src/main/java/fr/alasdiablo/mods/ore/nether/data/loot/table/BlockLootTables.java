@@ -1,6 +1,6 @@
-package fr.alasdiablo.mods.ore.nether.data.loot;
+package fr.alasdiablo.mods.ore.nether.data.loot.table;
 
-import fr.alasdiablo.mods.lib.api.data.loot.DioBlockLootSubProvider;
+import fr.alasdiablo.mods.lib.data.CustomBlockLootSubProvider;
 import fr.alasdiablo.mods.ore.nether.registry.NetherOreBlocks;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
 import net.minecraft.core.HolderLookup;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
 
-public class BlockLootTables extends DioBlockLootSubProvider {
+public class BlockLootTables extends CustomBlockLootSubProvider {
     private HolderLookup.RegistryLookup<Enchantment> enchantmentRegistryLookup;
 
     public BlockLootTables(HolderLookup.Provider lookupProvider) {

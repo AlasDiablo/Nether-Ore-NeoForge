@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.ore.nether.data;
+package fr.alasdiablo.mods.ore.nether.data.tag;
 
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import net.minecraft.core.HolderLookup;
@@ -6,10 +6,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.mods.ore.nether.registry.NetherOreBlocks.*;
@@ -18,11 +16,8 @@ import static fr.alasdiablo.mods.ore.nether.tag.NetherOreTags.Blocks.*;
 @SuppressWarnings("unchecked")
 public class BlocksTagsProvider extends BlockTagsProvider {
 
-    public BlocksTagsProvider(
-            PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-            @Nullable ExistingFileHelper existingFileHelper
-    ) {
-        super(output, lookupProvider, NetherOre.MOD_ID, existingFileHelper);
+    public BlocksTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider, NetherOre.MOD_ID);
     }
 
     @Override

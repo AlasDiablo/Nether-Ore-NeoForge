@@ -4,9 +4,7 @@
   "cookingtime": 100,
   "experience": 1.0,
   "group": "emerald",
-  "ingredient": {
-    "item": "dio_nether_ore:nether_emerald_ore"
-  },
+  "ingredient": "dio_nether_ore:nether_emerald_ore",
   "result": {
     "count": 1,
     "id": "minecraft:emerald"

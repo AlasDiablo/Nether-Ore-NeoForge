@@ -1,13 +1,14 @@
 package fr.alasdiablo.mods.ore.nether.block;
 
-import fr.alasdiablo.mods.lib.api.block.AngerZombifiedPiglin;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -23,16 +24,16 @@ import org.jetbrains.annotations.Nullable;
 public class NetherRedStoneOreBlock extends RedStoneOreBlock implements AngerZombifiedPiglin {
     private final IntProvider xpRange;
 
-    public NetherRedStoneOreBlock(IntProvider xpRange) {
+    public NetherRedStoneOreBlock(IntProvider xpRange, ResourceKey<Block> id) {
         super(BlockBehaviour.Properties.of()
-                      .mapColor(MapColor.NETHER)
-                      .instrument(NoteBlockInstrument.BASEDRUM)
-                      .requiresCorrectToolForDrops()
-                      .strength(3.0F, 3.0F)
-                      .sound(SoundType.NETHER_GOLD_ORE)
-                      .randomTicks()
-                      .lightLevel(value -> value.getValue(BlockStateProperties.LIT) ? 6 : 0));
-
+                .setId(id)
+                .mapColor(MapColor.NETHER)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops().strength(3.0F, 3.0F)
+                .sound(SoundType.NETHER_GOLD_ORE)
+                .randomTicks()
+                .lightLevel(value -> value.getValue(BlockStateProperties.LIT) ? 6 : 0)
+        );
         this.xpRange = xpRange;
     }
 
@@ -57,7 +58,7 @@ public class NetherRedStoneOreBlock extends RedStoneOreBlock implements AngerZom
             boolean willHarvest,
             @NotNull FluidState fluid
     ) {
-        this.anger(player, level, pos);
+        this.anger(player, level);
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
 }

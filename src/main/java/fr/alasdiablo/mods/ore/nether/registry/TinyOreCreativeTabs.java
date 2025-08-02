@@ -1,6 +1,6 @@
 package fr.alasdiablo.mods.ore.nether.registry;
 
-import fr.alasdiablo.mods.lib.api.item.GroundCreativeModeTab;
+import fr.alasdiablo.mods.lib.item.GroundCreativeModeTab;
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

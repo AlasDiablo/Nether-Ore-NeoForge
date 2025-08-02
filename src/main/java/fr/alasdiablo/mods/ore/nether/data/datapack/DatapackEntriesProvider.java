@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.ore.nether.data;
+package fr.alasdiablo.mods.ore.nether.data.datapack;
 
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import fr.alasdiablo.mods.ore.nether.data.feature.BiomesModifiers;

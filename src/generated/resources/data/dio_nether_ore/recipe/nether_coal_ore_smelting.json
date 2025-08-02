@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "coal",
-  "ingredient": {
-    "item": "dio_nether_ore:nether_coal_ore"
-  },
+  "ingredient": "dio_nether_ore:nether_coal_ore",
   "result": {
     "count": 1,
     "id": "minecraft:coal"

@@ -1,22 +1,24 @@
 package fr.alasdiablo.mods.ore.nether;
 
 import com.mojang.logging.LogUtils;
-import fr.alasdiablo.mods.ore.nether.data.*;
+import fr.alasdiablo.mods.ore.nether.config.NetherOreConfig;
+import fr.alasdiablo.mods.ore.nether.data.datapack.DatapackEntriesProvider;
+import fr.alasdiablo.mods.ore.nether.data.lang.LanguagesProvider;
+import fr.alasdiablo.mods.ore.nether.data.loot.LootTablesProvider;
+import fr.alasdiablo.mods.ore.nether.data.model.ModelsProvider;
+import fr.alasdiablo.mods.ore.nether.data.recipe.RecipesProvider;
+import fr.alasdiablo.mods.ore.nether.data.tag.BlocksTagsProvider;
+import fr.alasdiablo.mods.ore.nether.data.tag.ItemsTagsProvider;
 import fr.alasdiablo.mods.ore.nether.registry.NetherOreBlocks;
 import fr.alasdiablo.mods.ore.nether.registry.TinyOreCreativeTabs;
 import fr.alasdiablo.mods.ore.nether.tag.NetherOreTags;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
-
-import java.util.concurrent.CompletableFuture;
 
 @Mod(NetherOre.MOD_ID)
 public class NetherOre {
@@ -31,44 +33,40 @@ public class NetherOre {
         TinyOreCreativeTabs.init(modEventBus);
 
         modEventBus.addListener(this::gatherData);
+
+        modContainer.registerConfig(ModConfig.Type.COMMON, NetherOreConfig.SPEC);
     }
 
-    private void gatherData(@NotNull GatherDataEvent event) {
+    private void gatherData(@NotNull GatherDataEvent.Client event) {
         NetherOre.LOGGER.debug("Start data generator");
-        final DataGenerator                            generator          = event.getGenerator();
-        final PackOutput                               output             = generator.getPackOutput();
-        final CompletableFuture<HolderLookup.Provider> lookup             = event.getLookupProvider();
-        final ExistingFileHelper                       existingFileHelper = event.getExistingFileHelper();
 
         NetherOre.LOGGER.debug("Add Client Provider");
 
         NetherOre.LOGGER.debug("Add Block State Provider");
-        generator.addProvider(event.includeClient(), new BlockStatesProvider(output, existingFileHelper));
+        event.createProvider(ModelsProvider::new);
 
         NetherOre.LOGGER.debug("Add Language Provider");
-        generator.addProvider(event.includeClient(), new LanguagesProvider.French.Canada(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.French.France(output));
+        event.createProvider(LanguagesProvider.French.Canada::new);
+        event.createProvider(LanguagesProvider.French.France::new);
 
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Australia(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Canada(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.NewZealand(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedKingdom(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedStates(output));
+        event.createProvider(LanguagesProvider.English.Australia::new);
+        event.createProvider(LanguagesProvider.English.Canada::new);
+        event.createProvider(LanguagesProvider.English.NewZealand::new);
+        event.createProvider(LanguagesProvider.English.UnitedKingdom::new);
+        event.createProvider(LanguagesProvider.English.UnitedStates::new);
 
         NetherOre.LOGGER.debug("Add Server Provider");
 
         NetherOre.LOGGER.debug("Add Tags Provider");
-        final BlocksTagsProvider blockTagsProvider = new BlocksTagsProvider(output, lookup, existingFileHelper);
-        generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new ItemsTagsProvider(output, lookup, blockTagsProvider, existingFileHelper));
+        event.createBlockAndItemTags(BlocksTagsProvider::new, ItemsTagsProvider::new);
 
         NetherOre.LOGGER.debug("Add Datapack Provider");
-        generator.addProvider(event.includeServer(), new DatapackEntriesProvider(output, lookup));
+        event.createProvider(DatapackEntriesProvider::new);
 
         NetherOre.LOGGER.debug("Add Loot Table Provider");
-        generator.addProvider(event.includeServer(), new LootTablesProvider(output, lookup));
+        event.createProvider(LootTablesProvider::new);
 
         NetherOre.LOGGER.debug("Add Recipes Provider");
-        generator.addProvider(event.includeServer(), new RecipesProvider(output, lookup));
+        event.createProvider(RecipesProvider.Runner::new);
     }
 }

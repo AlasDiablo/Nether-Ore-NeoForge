@@ -1,6 +1,6 @@
-package fr.alasdiablo.mods.ore.nether.data;
+package fr.alasdiablo.mods.ore.nether.data.loot;
 
-import fr.alasdiablo.mods.ore.nether.data.loot.BlockLootTables;
+import fr.alasdiablo.mods.ore.nether.data.loot.table.BlockLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;

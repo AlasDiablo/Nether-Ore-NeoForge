@@ -1,26 +1,19 @@
-package fr.alasdiablo.mods.ore.nether.data;
+package fr.alasdiablo.mods.ore.nether.data.tag;
 
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import fr.alasdiablo.mods.ore.nether.tag.NetherOreTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.BlockTagCopyingItemTagProvider;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-public class ItemsTagsProvider extends ItemTagsProvider {
-    public ItemsTagsProvider(
-            PackOutput output, CompletableFuture<HolderLookup.Provider> lookup,
-            @NotNull TagsProvider<Block> blockTagsProvider,
-            @Nullable ExistingFileHelper existingFileHelper
-    ) {
-        super(output, lookup, blockTagsProvider.contentsGetter(), NetherOre.MOD_ID, existingFileHelper);
+public class ItemsTagsProvider extends BlockTagCopyingItemTagProvider {
+    public ItemsTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags) {
+        super(output, lookupProvider, blockTags, NetherOre.MOD_ID);
     }
 
     @Override

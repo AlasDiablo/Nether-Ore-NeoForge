@@ -1,3 +1,7 @@
+### 2.0.0
+
+- Update to 1.21.8
+
 ### 1.1.0
 
 - Change smelting result to be feature equivalent to minecraft vanilla nether ore
