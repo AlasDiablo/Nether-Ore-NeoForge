@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class BiomesModifiers {
 
+    public static final ResourceKey<BiomeModifier> ORE_ANCIENT_DEBRIS  = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE);
     public static final ResourceKey<BiomeModifier> ORE_NETHER_COAL     = register(NetherOreRegistries.NETHER_COAL_ORE);
     public static final ResourceKey<BiomeModifier> ORE_NETHER_COPPER   = register(NetherOreRegistries.NETHER_COPPER_ORE);
     public static final ResourceKey<BiomeModifier> ORE_NETHER_DIAMOND  = register(NetherOreRegistries.NETHER_DIAMOND_ORE);
@@ -29,6 +30,7 @@ public class BiomesModifiers {
     public static final ResourceKey<BiomeModifier> ORE_NETHER_LAPIS    = register(NetherOreRegistries.NETHER_LAPIS_ORE);
     public static final ResourceKey<BiomeModifier> ORE_NETHER_REDSTONE = register(NetherOreRegistries.NETHER_REDSTONE_ORE);
 
+    public static final ResourceKey<BiomeModifier> ORE_ANCIENT_DEBRIS_CEILING        = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE + "_ceiling");
     public static final ResourceKey<BiomeModifier> ORE_NETHER_COAL_BASALT_DELTAS     = register(NetherOreRegistries.NETHER_COAL_ORE + "_basalt_deltas");
     public static final ResourceKey<BiomeModifier> ORE_NETHER_COPPER_CRIMSON_FOREST  = register(NetherOreRegistries.NETHER_COPPER_ORE + "_crimson_forest");
     public static final ResourceKey<BiomeModifier> ORE_NETHER_DIAMOND_WARPED_FOREST  = register(NetherOreRegistries.NETHER_DIAMOND_ORE + "_warped_forest");
@@ -49,6 +51,10 @@ public class BiomesModifiers {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<Biome>         biomes         = context.lookup(Registries.BIOME);
 
+        context.register(ORE_ANCIENT_DEBRIS, createBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.ORE_ANCIENT_DEBRIS))
+        ));
         context.register(ORE_NETHER_COAL, createBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.ORE_NETHER_COAL))
@@ -78,6 +84,10 @@ public class BiomesModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.ORE_NETHER_REDSTONE))
         ));
 
+        context.register(ORE_ANCIENT_DEBRIS_CEILING, createBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.ORE_ANCIENT_DEBRIS_EXTRA))
+        ));
         context.register(ORE_NETHER_COAL_BASALT_DELTAS, createBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.BASALT_DELTAS)),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.ORE_NETHER_COAL_EXTRA))

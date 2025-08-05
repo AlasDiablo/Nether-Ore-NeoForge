@@ -2,6 +2,8 @@ package fr.alasdiablo.mods.ore.nether.data.recipe;
 
 import fr.alasdiablo.mods.ore.nether.NetherOre;
 import fr.alasdiablo.mods.ore.nether.registry.NetherOreBlocks;
+import fr.alasdiablo.mods.resources.ExtendedResources;
+import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -24,6 +26,7 @@ public class RecipesProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
+        this.registerNetherOre(NetherOreBlocks.ANCIENT_DEBRIS_ORE, ExtendedResourcesItems.NETHERITE_FRAGMENT, 1.0F);
 
         this.registerNetherOre(NetherOreBlocks.NETHER_COAL_ORE, Items.COAL, 0.1f);
         this.registerNetherOre(NetherOreBlocks.NETHER_COPPER_ORE, Items.COPPER_INGOT, 0.7F);

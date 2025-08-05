@@ -1,6 +1,8 @@
 package fr.alasdiablo.mods.ore.nether;
 
 public class NetherOreRegistries {
+    public static final String ANCIENT_DEBRIS_ORE = "ancient_debris_ore";
+
     public static final String NETHER_COAL_ORE     = "nether_coal_ore";
     public static final String NETHER_COPPER_ORE   = "nether_copper_ore";
     public static final String NETHER_DIAMOND_ORE  = "nether_diamond_ore";

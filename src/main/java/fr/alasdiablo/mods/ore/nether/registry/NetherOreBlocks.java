@@ -21,6 +21,9 @@ public class NetherOreBlocks {
     static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(NetherOre.MOD_ID);
     static final DeferredRegister.Items  ITEMS  = DeferredRegister.createItems(NetherOre.MOD_ID);
 
+    public static final DeferredBlock<Block> ANCIENT_DEBRIS_ORE = register(
+            (registryName) -> new NetherOreBlock(UniformInt.of(2, 4), ResourceKey.create(Registries.BLOCK, registryName)), NetherOreRegistries.ANCIENT_DEBRIS_ORE);
+
     public static final DeferredBlock<Block> NETHER_COAL_ORE     = register(
             (registryName) -> new NetherOreBlock(UniformInt.of(0, 1), ResourceKey.create(Registries.BLOCK, registryName)), NetherOreRegistries.NETHER_COAL_ORE);
     public static final DeferredBlock<Block> NETHER_COPPER_ORE   = register(
@@ -43,18 +46,14 @@ public class NetherOreBlocks {
     }
 
     public static void displayItemsGenerator(CreativeModeTab.ItemDisplayParameters parameters, @NotNull CreativeModeTab.Output output) {
+        output.accept(ANCIENT_DEBRIS_ORE.get());
+
         output.accept(NETHER_COAL_ORE.get());
-
         output.accept(NETHER_COPPER_ORE.get());
-
         output.accept(NETHER_DIAMOND_ORE.get());
-
         output.accept(NETHER_EMERALD_ORE.get());
-
         output.accept(NETHER_IRON_ORE.get());
-
         output.accept(NETHER_LAPIS_ORE.get());
-
         output.accept(NETHER_REDSTONE_ORE.get());
     }
 

@@ -14,6 +14,7 @@ public class NetherOreTags {
 
         public static final TagKey<Item> ORES_NETHER = commonTag("ores/nether");
 
+        public static final TagKey<Item> ORES_NETHERITE_SCRAP  = commonTag("ores/nether/netherite_scrap");
         public static final TagKey<Item> ORES_NETHER_COAL     = commonTag("ores/nether/coal");
         public static final TagKey<Item> ORES_NETHER_COPPER   = commonTag("ores/nether/copper");
         public static final TagKey<Item> ORES_NETHER_DIAMOND  = commonTag("ores/nether/diamond");
@@ -33,6 +34,7 @@ public class NetherOreTags {
 
         public static final TagKey<Block> ORES_NETHER = commonTag("ores/nether");
 
+        public static final TagKey<Block> ORES_NETHERITE_SCRAP  = commonTag("ores/nether/netherite_scrap");
         public static final TagKey<Block> ORES_NETHER_COAL     = commonTag("ores/nether/coal");
         public static final TagKey<Block> ORES_NETHER_COPPER   = commonTag("ores/nether/copper");
         public static final TagKey<Block> ORES_NETHER_DIAMOND  = commonTag("ores/nether/diamond");

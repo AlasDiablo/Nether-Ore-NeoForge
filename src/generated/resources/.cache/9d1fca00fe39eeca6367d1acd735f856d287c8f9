@@ -1,4 +1,6 @@
-// 1.21.8	2025-08-02T12:23:12.1296844	Dio's Nether Ore Recipes Provider
+// 1.21.8	2025-08-05T11:39:15.7841007	Dio's Nether Ore Recipes Provider
+3ec604743dc215572917a76338954d0756ae509c data/dio_nether_ore/advancement/recipes/misc/ancient_debris_ore_blasting.json
+33573cd1fef8d6764e84460f3c35b6e0a50e1d3e data/dio_nether_ore/advancement/recipes/misc/ancient_debris_ore_smelting.json
 a4fcc4a42b7d3505bfa73531c8469a859f4f0604 data/dio_nether_ore/advancement/recipes/misc/nether_coal_ore_blasting.json
 b7d6e1268af24f86fe063178b6d5a908a0f068d7 data/dio_nether_ore/advancement/recipes/misc/nether_coal_ore_smelting.json
 65bef3e6eae1af22ef1f53d12a8375168a8ada1f data/dio_nether_ore/advancement/recipes/misc/nether_copper_ore_blasting.json
@@ -13,6 +15,8 @@ baf8e265aac2f7c6f8ebeb419f77dae9fc72b33e data/dio_nether_ore/advancement/recipes
 bf38cb0c859eeae8a639907926db9d0c53db7671 data/dio_nether_ore/advancement/recipes/misc/nether_lapis_ore_smelting.json
 c2144a479b496384fc4be8471230f8ccf1ab7b68 data/dio_nether_ore/advancement/recipes/misc/nether_redstone_ore_blasting.json
 67c74e8fb188a674ea179cc29e00700bad43ce7a data/dio_nether_ore/advancement/recipes/misc/nether_redstone_ore_smelting.json
+64d3bb42e5070bd24e9f818bc6b33f000011c43f data/dio_nether_ore/recipe/ancient_debris_ore_blasting.json
+9bdfb7e942e63a9deecd10943e06edf70ef9b1db data/dio_nether_ore/recipe/ancient_debris_ore_smelting.json
 fae1ddf566ddee4e37e7ce8f3b610d62c39e764f data/dio_nether_ore/recipe/nether_coal_ore_blasting.json
 0a241ebd5cc0e732b82e02d690c3381dfdb296f6 data/dio_nether_ore/recipe/nether_coal_ore_smelting.json
 f5634a652fcc9622479415c65cc8ce44a1fca64f data/dio_nether_ore/recipe/nether_copper_ore_blasting.json

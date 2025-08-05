@@ -1,4 +1,4 @@
-// 1.21.8	2025-08-02T12:23:12.126684	Tags for minecraft:block mod id dio_nether_ore
+// 1.21.8	2025-08-05T12:03:57.8789371	Tags for minecraft:block mod id dio_nether_ore
 557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/block/ores.json
 07579a69fa3c0e3f93fb1eb611951632aeb79903 data/c/tags/block/ores/coal.json
 344175f6efc33787dd94ff34a3aff55ce6034b22 data/c/tags/block/ores/copper.json
@@ -6,17 +6,20 @@ afb4687c8a54494fe4ae210f029edf9bb596b49f data/c/tags/block/ores/diamond.json
 274b007931b073ed03a34bd3b99ad1be38b417bc data/c/tags/block/ores/emerald.json
 8302aed367ec3acd3b52b625b42ee3a9a7ac8150 data/c/tags/block/ores/iron.json
 1eef9978296fd7b6a64429e8bda244bec092344f data/c/tags/block/ores/lapis.json
-8baa5090cd99f0c440d371dd4944c8262f33ae44 data/c/tags/block/ores/nether.json
+67fa7898483065c8ee6c99d7ba2cd16b249c62e5 data/c/tags/block/ores/nether.json
+b0da955b7dc2a81b4681e3bfaffd56560bf18f29 data/c/tags/block/ores/netherite_scrap.json
 07579a69fa3c0e3f93fb1eb611951632aeb79903 data/c/tags/block/ores/nether/coal.json
 344175f6efc33787dd94ff34a3aff55ce6034b22 data/c/tags/block/ores/nether/copper.json
 afb4687c8a54494fe4ae210f029edf9bb596b49f data/c/tags/block/ores/nether/diamond.json
 274b007931b073ed03a34bd3b99ad1be38b417bc data/c/tags/block/ores/nether/emerald.json
 8302aed367ec3acd3b52b625b42ee3a9a7ac8150 data/c/tags/block/ores/nether/iron.json
 1eef9978296fd7b6a64429e8bda244bec092344f data/c/tags/block/ores/nether/lapis.json
+b0da955b7dc2a81b4681e3bfaffd56560bf18f29 data/c/tags/block/ores/nether/netherite_scrap.json
 a54443fc6ab384d99c87aa1eec5525adf8e3dd7e data/c/tags/block/ores/nether/redstone.json
 a54443fc6ab384d99c87aa1eec5525adf8e3dd7e data/c/tags/block/ores/redstone.json
 557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/block/ores_in_ground/netherrack.json
 557d3c0fb9d4675cb4e1502a1c5be02d26bec353 data/c/tags/block/ore_rates/sparse.json
-c860097ec9daae3a72d1b07fe03629dda6b757e9 data/minecraft/tags/block/mineable/pickaxe.json
+8a5e5df7a2d625db3dc68ce72ce83830724ed5f1 data/minecraft/tags/block/mineable/pickaxe.json
+b0da955b7dc2a81b4681e3bfaffd56560bf18f29 data/minecraft/tags/block/needs_diamond_tool.json
 428faee04fcc845d217cb674e090eaae3d856068 data/minecraft/tags/block/needs_iron_tool.json
 8c6e6c45c34961bc7cd51b6e4580461a5b94c71b data/minecraft/tags/block/needs_stone_tool.json

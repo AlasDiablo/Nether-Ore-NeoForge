@@ -16,6 +16,8 @@ public class ModelsProvider extends ModelProvider {
 
     @Override
     protected void registerModels(@NotNull BlockModelGenerators blockModels, @NotNull ItemModelGenerators itemModels) {
+        blockModels.createTrivialCube(ANCIENT_DEBRIS_ORE.get());
+
         blockModels.createTrivialCube(NETHER_COAL_ORE.get());
         blockModels.createTrivialCube(NETHER_COPPER_ORE.get());
         blockModels.createTrivialCube(NETHER_DIAMOND_ORE.get());

@@ -1,4 +1,5 @@
-// 1.21.8	2025-08-02T12:23:12.1306853	Model Definitions - dio_nether_ore
+// 1.21.8	2025-08-05T11:39:15.7851026	Model Definitions - dio_nether_ore
+ee2c058835248894ed96e8d022da0902ff6029ff assets/dio_nether_ore/blockstates/ancient_debris_ore.json
 cef0821ac91967f3880df4a71e815b0465d10ba3 assets/dio_nether_ore/blockstates/nether_coal_ore.json
 824873c40ea86e92fae38e62386054fe468747ac assets/dio_nether_ore/blockstates/nether_copper_ore.json
 7591bd565e289ccc79e3800dc48e0b854b660328 assets/dio_nether_ore/blockstates/nether_diamond_ore.json
@@ -6,6 +7,7 @@ cef0821ac91967f3880df4a71e815b0465d10ba3 assets/dio_nether_ore/blockstates/nethe
 dddfbddfe9ef148fb93f205d3dae12bdcb2244c7 assets/dio_nether_ore/blockstates/nether_iron_ore.json
 a5356823290c791a10f9487c882612d2585b56a2 assets/dio_nether_ore/blockstates/nether_lapis_ore.json
 1e28d9bb5c3a6f973950b40792600119b79dcd00 assets/dio_nether_ore/blockstates/nether_redstone_ore.json
+5cda37cac1604011f8727f43a7f191bc2dd3bc55 assets/dio_nether_ore/items/ancient_debris_ore.json
 7d28c9df3a2d91c7667d0118ba7f673be3683128 assets/dio_nether_ore/items/nether_coal_ore.json
 45157fecb8b9a3d320994760d7a07c31a4d223c1 assets/dio_nether_ore/items/nether_copper_ore.json
 99c9bc3bd4fa5635e6c19230a5bc6340c220eaed assets/dio_nether_ore/items/nether_diamond_ore.json
@@ -13,6 +15,7 @@ a5356823290c791a10f9487c882612d2585b56a2 assets/dio_nether_ore/blockstates/nethe
 f82a22a22bc77aa40c2c64ea6e1b3260737471ce assets/dio_nether_ore/items/nether_iron_ore.json
 49cfd2d93b23719b851926ad032d36632e254934 assets/dio_nether_ore/items/nether_lapis_ore.json
 8ae30d388d61f97a15db48146d2698b0c205aeb4 assets/dio_nether_ore/items/nether_redstone_ore.json
+bf3c1e85321cbf9ceefc4c861395c7e6c5ca3a41 assets/dio_nether_ore/models/block/ancient_debris_ore.json
 9baca2c4f4535f9bf76c9948b80f9e9eb1061077 assets/dio_nether_ore/models/block/nether_coal_ore.json
 60dbd67be63ab25740a22b2713bac8e35e243559 assets/dio_nether_ore/models/block/nether_copper_ore.json
 39720f8efadf899106dca16a13f427b5df9395ab assets/dio_nether_ore/models/block/nether_diamond_ore.json

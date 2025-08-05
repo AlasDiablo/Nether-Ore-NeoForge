@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
@@ -28,6 +29,16 @@ public class BlockLootTables extends CustomBlockLootSubProvider {
     @Override
     protected void generate() {
         this.enchantmentRegistryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
+        this.add(
+                NetherOreBlocks.ANCIENT_DEBRIS_ORE.get(),
+                (netherOre) -> createSilkTouchDispatchTable(
+                        netherOre,
+                        applyExplosionDecay(netherOre, LootItem.lootTableItem(ExtendedResourcesItems.NETHERITE_FRAGMENT.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)))
+                        )
+                )
+        );
 
         this.registerNetherOre(NetherOreBlocks.NETHER_COAL_ORE.get(), ExtendedResourcesItems.COAL_NUGGET.get());
         this.registerNetherOre(NetherOreBlocks.NETHER_COPPER_ORE.get(), ExtendedResourcesItems.COPPER_NUGGET.get());

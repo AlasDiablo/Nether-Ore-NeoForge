@@ -9,17 +9,16 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.CountPlacement;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class PlacedFeatures {
 
+    public static final ResourceKey<PlacedFeature> ORE_ANCIENT_DEBRIS = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE);
     public static final ResourceKey<PlacedFeature> ORE_NETHER_COAL     = register(NetherOreRegistries.NETHER_COAL_ORE);
     public static final ResourceKey<PlacedFeature> ORE_NETHER_COPPER   = register(NetherOreRegistries.NETHER_COPPER_ORE);
     public static final ResourceKey<PlacedFeature> ORE_NETHER_DIAMOND  = register(NetherOreRegistries.NETHER_DIAMOND_ORE);
@@ -28,6 +27,7 @@ public class PlacedFeatures {
     public static final ResourceKey<PlacedFeature> ORE_NETHER_LAPIS    = register(NetherOreRegistries.NETHER_LAPIS_ORE);
     public static final ResourceKey<PlacedFeature> ORE_NETHER_REDSTONE = register(NetherOreRegistries.NETHER_REDSTONE_ORE);
 
+    public static final ResourceKey<PlacedFeature> ORE_ANCIENT_DEBRIS_EXTRA = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE + "_extra");
     public static final ResourceKey<PlacedFeature> ORE_NETHER_COAL_EXTRA     = register(NetherOreRegistries.NETHER_COAL_ORE + "_extra");
     public static final ResourceKey<PlacedFeature> ORE_NETHER_COPPER_EXTRA   = register(NetherOreRegistries.NETHER_COPPER_ORE + "_extra");
     public static final ResourceKey<PlacedFeature> ORE_NETHER_DIAMOND_EXTRA  = register(NetherOreRegistries.NETHER_DIAMOND_ORE + "_extra");
@@ -36,10 +36,23 @@ public class PlacedFeatures {
     public static final ResourceKey<PlacedFeature> ORE_NETHER_REDSTONE_EXTRA = register(NetherOreRegistries.NETHER_REDSTONE_ORE + "_extra");
 
     private static @NotNull PlacedFeature createPlacedFeature(
-            Holder.Reference<ConfiguredFeature<?, ?>> configuredFeature, int count
+            Holder.Reference<ConfiguredFeature<?, ?>> configuredFeature, int count, PlacementModifier placementModifier
     ) {
         return new PlacedFeature(
-                configuredFeature, List.of(CountPlacement.of(count), InSquarePlacement.spread(), PlacementUtils.RANGE_10_10, BiomeFilter.biome()));
+                configuredFeature,
+                List.of(
+                        CountPlacement.of(count),
+                        InSquarePlacement.spread(),
+                        placementModifier,
+                        BiomeFilter.biome()
+                )
+        );
+    }
+
+    private static @NotNull PlacedFeature createPlacedFeature(
+            Holder.Reference<ConfiguredFeature<?, ?>> configuredFeature, int count
+    ) {
+        return createPlacedFeature(configuredFeature, count, PlacementUtils.RANGE_10_10);
     }
 
     private static @NotNull PlacedFeature createDefaultPlacedFeature(
@@ -57,6 +70,7 @@ public class PlacedFeatures {
     public static void bootstrap(@NotNull BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        context.register(ORE_ANCIENT_DEBRIS, createPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_ANCIENT_DEBRIS), 4));
         context.register(ORE_NETHER_COAL, createDefaultPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_COAL)));
         context.register(ORE_NETHER_COPPER, createDefaultPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_COPPER)));
         context.register(ORE_NETHER_DIAMOND, createDefaultPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_DIAMOND)));
@@ -65,6 +79,15 @@ public class PlacedFeatures {
         context.register(ORE_NETHER_LAPIS, createDefaultPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_LAPIS)));
         context.register(ORE_NETHER_REDSTONE, createDefaultPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_REDSTONE)));
 
+        context.register(ORE_ANCIENT_DEBRIS_EXTRA, createPlacedFeature(
+                        configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_ANCIENT_DEBRIS_EXTRA),
+                        4,
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(94),
+                                VerticalAnchor.absolute(126)
+                        )
+                )
+        );
         context.register(ORE_NETHER_COAL_EXTRA, createExtraPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_COAL_EXTRA)));
         context.register(ORE_NETHER_COPPER_EXTRA, createExtraPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_COPPER_EXTRA)));
         context.register(ORE_NETHER_DIAMOND_EXTRA, createExtraPlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ORE_NETHER_DIAMOND_EXTRA)));

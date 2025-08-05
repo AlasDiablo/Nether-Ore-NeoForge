@@ -22,6 +22,8 @@ public class BlocksTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(@NotNull HolderLookup.Provider pProvider) {
+
+        this.tag(ORES_NETHERITE_SCRAP).add(ANCIENT_DEBRIS_ORE.get());
         this.tag(ORES_NETHER_COAL).add(NETHER_COAL_ORE.get());
         this.tag(ORES_NETHER_COPPER).add(NETHER_COPPER_ORE.get());
         this.tag(ORES_NETHER_DIAMOND).add(NETHER_DIAMOND_ORE.get());
@@ -30,6 +32,7 @@ public class BlocksTagsProvider extends BlockTagsProvider {
         this.tag(ORES_NETHER_LAPIS).add(NETHER_LAPIS_ORE.get());
         this.tag(ORES_NETHER_REDSTONE).add(NETHER_REDSTONE_ORE.get());
 
+        this.tag(Tags.Blocks.ORES_NETHERITE_SCRAP).add(ANCIENT_DEBRIS_ORE.get());
         this.tag(Tags.Blocks.ORES_COAL).add(NETHER_COAL_ORE.get());
         this.tag(Tags.Blocks.ORES_COPPER).add(NETHER_COPPER_ORE.get());
         this.tag(Tags.Blocks.ORES_DIAMOND).add(NETHER_DIAMOND_ORE.get());
@@ -39,9 +42,9 @@ public class BlocksTagsProvider extends BlockTagsProvider {
         this.tag(Tags.Blocks.ORES_REDSTONE).add(NETHER_REDSTONE_ORE.get());
 
         this.tag(ORES_NETHER).addTags(
-                ORES_NETHER_COAL, ORES_NETHER_COPPER, ORES_NETHER_DIAMOND,
-                ORES_NETHER_EMERALD, ORES_NETHER_IRON, ORES_NETHER_LAPIS,
-                ORES_NETHER_REDSTONE
+                ORES_NETHERITE_SCRAP, ORES_NETHER_COAL, ORES_NETHER_COPPER,
+                ORES_NETHER_DIAMOND, ORES_NETHER_EMERALD, ORES_NETHER_IRON,
+                ORES_NETHER_LAPIS, ORES_NETHER_REDSTONE
         );
 
         this.tag(Tags.Blocks.ORES).addTag(ORES_NETHER);
@@ -49,6 +52,7 @@ public class BlocksTagsProvider extends BlockTagsProvider {
         this.tag(Tags.Blocks.ORES_IN_GROUND_NETHERRACK).addTag(ORES_NETHER);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ANCIENT_DEBRIS_ORE.get(),
                 NETHER_COAL_ORE.get(),
                 NETHER_COPPER_ORE.get(),
                 NETHER_DIAMOND_ORE.get(),
@@ -68,6 +72,10 @@ public class BlocksTagsProvider extends BlockTagsProvider {
                 NETHER_DIAMOND_ORE.get(),
                 NETHER_EMERALD_ORE.get(),
                 NETHER_REDSTONE_ORE.get()
+        );
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                ANCIENT_DEBRIS_ORE.get()
         );
     }
 }

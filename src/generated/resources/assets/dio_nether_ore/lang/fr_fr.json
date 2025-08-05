@@ -1,10 +1,11 @@
 {
-  "block.dio_nether_ore.nether_coal_ore": "Minerai de charbon minuscule",
-  "block.dio_nether_ore.nether_copper_ore": "Minerai de cuivre minuscule",
-  "block.dio_nether_ore.nether_diamond_ore": "Minerai de diamant minuscule",
-  "block.dio_nether_ore.nether_emerald_ore": "Minerai d'émeraude minuscule",
-  "block.dio_nether_ore.nether_iron_ore": "Minerai de fer minuscule",
-  "block.dio_nether_ore.nether_lapis_ore": "Minerai de lapis-lazuli minuscule",
-  "block.dio_nether_ore.nether_redstone_ore": "Minerai de redstone minuscule",
+  "block.dio_nether_ore.ancient_debris_ore": "Minerai de débris antiques",
+  "block.dio_nether_ore.nether_coal_ore": "Minerai de charbon du Nether",
+  "block.dio_nether_ore.nether_copper_ore": "Minerai de cuivre du Nether",
+  "block.dio_nether_ore.nether_diamond_ore": "Minerai de diamant du Nether",
+  "block.dio_nether_ore.nether_emerald_ore": "Minerai d'émeraude du Nether",
+  "block.dio_nether_ore.nether_iron_ore": "Minerai de fer du Nether",
+  "block.dio_nether_ore.nether_lapis_ore": "Minerai de lapis-lazuli du Nether",
+  "block.dio_nether_ore.nether_redstone_ore": "Minerai de redstone du Nether",
   "item_group.dio_nether_ore.tab": "Dio's Nether Ore"
 }

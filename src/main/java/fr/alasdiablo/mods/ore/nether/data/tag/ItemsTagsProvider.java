@@ -18,6 +18,7 @@ public class ItemsTagsProvider extends BlockTagCopyingItemTagProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        this.copy(NetherOreTags.Blocks.ORES_NETHERITE_SCRAP, NetherOreTags.Items.ORES_NETHERITE_SCRAP);
         this.copy(NetherOreTags.Blocks.ORES_NETHER_COAL, NetherOreTags.Items.ORES_NETHER_COAL);
         this.copy(NetherOreTags.Blocks.ORES_NETHER_COPPER, NetherOreTags.Items.ORES_NETHER_COPPER);
         this.copy(NetherOreTags.Blocks.ORES_NETHER_DIAMOND, NetherOreTags.Items.ORES_NETHER_DIAMOND);
@@ -26,6 +27,7 @@ public class ItemsTagsProvider extends BlockTagCopyingItemTagProvider {
         this.copy(NetherOreTags.Blocks.ORES_NETHER_LAPIS, NetherOreTags.Items.ORES_NETHER_LAPIS);
         this.copy(NetherOreTags.Blocks.ORES_NETHER_REDSTONE, NetherOreTags.Items.ORES_NETHER_REDSTONE);
 
+        this.copy(Tags.Blocks.ORES_NETHERITE_SCRAP, Tags.Items.ORES_NETHERITE_SCRAP);
         this.copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
         this.copy(Tags.Blocks.ORES_COPPER, Tags.Items.ORES_COPPER);
         this.copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);

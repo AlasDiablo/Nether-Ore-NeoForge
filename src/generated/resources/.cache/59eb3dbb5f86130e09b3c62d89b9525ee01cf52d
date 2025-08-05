@@ -1,4 +1,5 @@
-// 1.21.8	2025-08-02T12:23:12.126684	Loot Tables
+// 1.21.8	2025-08-05T12:03:57.8779373	Loot Tables
+e37ce4e1214da4e1a9158765f5a6d41cf9758220 data/dio_nether_ore/loot_table/blocks/ancient_debris_ore.json
 ef531da668828b21e270fd2c801d4cd5cce4d785 data/dio_nether_ore/loot_table/blocks/nether_coal_ore.json
 c807aab92afde917faed8454417bdfa0092bce48 data/dio_nether_ore/loot_table/blocks/nether_copper_ore.json
 5d3df825929dae7a18b0350de8ebbf8aaac6ba69 data/dio_nether_ore/loot_table/blocks/nether_diamond_ore.json

@@ -27,6 +27,7 @@ public class LanguagesProvider {
             @Override
             protected void addTranslations() {
                 super.addTranslations();
+                this.add(ANCIENT_DEBRIS_ORE.get(), "Ancient Debris Ore");
 
                 this.add(NETHER_COAL_ORE.get(), "Nether Coal Ore");
                 this.add(NETHER_COPPER_ORE.get(), "Nether Copper Ore");
@@ -78,14 +79,15 @@ public class LanguagesProvider {
             @Override
             protected void addTranslations() {
                 super.addTranslations();
+                this.add(ANCIENT_DEBRIS_ORE.get(), "Minerai de débris antiques");
 
-                this.add(NETHER_COAL_ORE.get(), "Minerai de charbon minuscule");
-                this.add(NETHER_COPPER_ORE.get(), "Minerai de cuivre minuscule");
-                this.add(NETHER_DIAMOND_ORE.get(), "Minerai de diamant minuscule");
-                this.add(NETHER_EMERALD_ORE.get(), "Minerai d'émeraude minuscule");
-                this.add(NETHER_IRON_ORE.get(), "Minerai de fer minuscule");
-                this.add(NETHER_LAPIS_ORE.get(), "Minerai de lapis-lazuli minuscule");
-                this.add(NETHER_REDSTONE_ORE.get(), "Minerai de redstone minuscule");
+                this.add(NETHER_COAL_ORE.get(), "Minerai de charbon du Nether");
+                this.add(NETHER_COPPER_ORE.get(), "Minerai de cuivre du Nether");
+                this.add(NETHER_DIAMOND_ORE.get(), "Minerai de diamant du Nether");
+                this.add(NETHER_EMERALD_ORE.get(), "Minerai d'émeraude du Nether");
+                this.add(NETHER_IRON_ORE.get(), "Minerai de fer du Nether");
+                this.add(NETHER_LAPIS_ORE.get(), "Minerai de lapis-lazuli du Nether");
+                this.add(NETHER_REDSTONE_ORE.get(), "Minerai de redstone du Nether");
             }
         }
 

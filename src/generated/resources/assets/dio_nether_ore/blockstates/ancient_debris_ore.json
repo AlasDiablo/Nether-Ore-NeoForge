@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dio_nether_ore:block/ancient_debris_ore"
+    }
+  }
+}

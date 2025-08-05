@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "netherite_fragment",
+  "ingredient": "dio_nether_ore:ancient_debris_ore",
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:netherite_fragment"
+  }
+}

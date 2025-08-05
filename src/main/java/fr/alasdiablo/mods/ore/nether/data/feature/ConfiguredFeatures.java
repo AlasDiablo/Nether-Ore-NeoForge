@@ -21,6 +21,7 @@ import java.util.List;
 public class ConfiguredFeatures {
     private static final RuleTest NETHERRACK_ORE_REPLACEABLES = new BlockMatchTest(Blocks.NETHERRACK);
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_ANCIENT_DEBRIS  = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE);
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_COAL     = register(NetherOreRegistries.NETHER_COAL_ORE);
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_COPPER   = register(NetherOreRegistries.NETHER_COPPER_ORE);
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_DIAMOND  = register(NetherOreRegistries.NETHER_DIAMOND_ORE);
@@ -29,6 +30,7 @@ public class ConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_LAPIS    = register(NetherOreRegistries.NETHER_LAPIS_ORE);
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_REDSTONE = register(NetherOreRegistries.NETHER_REDSTONE_ORE);
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_ANCIENT_DEBRIS_EXTRA  = register(NetherOreRegistries.ANCIENT_DEBRIS_ORE + "_extra");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_COAL_EXTRA     = register(NetherOreRegistries.NETHER_COAL_ORE + "_extra");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_COPPER_EXTRA   = register(NetherOreRegistries.NETHER_COPPER_ORE + "_extra");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_NETHER_DIAMOND_EXTRA  = register(NetherOreRegistries.NETHER_DIAMOND_ORE + "_extra");
@@ -57,6 +59,7 @@ public class ConfiguredFeatures {
     }
 
     public static void bootstrap(@NotNull BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        context.register(ORE_ANCIENT_DEBRIS, createConfiguredFeature(NetherOreBlocks.ANCIENT_DEBRIS_ORE.get(), 2));
         context.register(ORE_NETHER_COAL, createConfiguredFeature(NetherOreBlocks.NETHER_COAL_ORE.get()));
         context.register(ORE_NETHER_COPPER, createConfiguredFeature(NetherOreBlocks.NETHER_COPPER_ORE.get()));
         context.register(ORE_NETHER_DIAMOND, createConfiguredFeature(NetherOreBlocks.NETHER_DIAMOND_ORE.get()));
@@ -65,6 +68,7 @@ public class ConfiguredFeatures {
         context.register(ORE_NETHER_LAPIS, createConfiguredFeature(NetherOreBlocks.NETHER_LAPIS_ORE.get()));
         context.register(ORE_NETHER_REDSTONE, createConfiguredFeature(NetherOreBlocks.NETHER_REDSTONE_ORE.get()));
 
+        context.register(ORE_ANCIENT_DEBRIS_EXTRA, createConfiguredFeature(NetherOreBlocks.ANCIENT_DEBRIS_ORE.get(), 6));
         context.register(ORE_NETHER_COAL_EXTRA, createConfiguredFeature(NetherOreBlocks.NETHER_COAL_ORE.get(), 18));
         context.register(ORE_NETHER_COPPER_EXTRA, createConfiguredFeature(NetherOreBlocks.NETHER_COPPER_ORE.get(), 14));
         context.register(ORE_NETHER_DIAMOND_EXTRA, createConfiguredFeature(NetherOreBlocks.NETHER_DIAMOND_ORE.get(), 12));
