@@ -130,8 +130,8 @@ configurations {
 dependencies {
     // runtimeOnly("curse.maven:world-stripper-250603:5592921")
 
-    implementation("curse.maven:dio_lib-422014:6818297")
-    implementation("curse.maven:dio_extended_resources-1090578:6828745")
+    implementation("curse.maven:dios-lib-422014:7210099")
+    implementation("curse.maven:dios-extended-resources-1090578:7210185")
 
     // compile against the JEI API but do not include it at runtime
     compileOnly("mezz.jei:jei-1.21.7-common-api:${jei_version}")

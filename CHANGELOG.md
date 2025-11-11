@@ -1,3 +1,8 @@
+### 2.2.0
+
+- Update dependencies (Dio's Lib to 10.1.0 and Dio's Extended Resources to 2.2.0)
+- Update block textures
+
 ### 2.1.0
 
 - Add Ancient Debris Ore
